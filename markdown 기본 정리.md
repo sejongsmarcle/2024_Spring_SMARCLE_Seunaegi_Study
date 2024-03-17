@@ -403,14 +403,14 @@ ___
 <details><summary>토글제목뾰삥뿅</summary>
 <p>
 
-    탭하고 내용 작성해주기!
+내용 작성해주기!
 </p></details>
 ```
 ***
 <details><summary>토글제목뾰삥뿅</summary>
 <p>
 
-    탭하고 내용 작성해주기!
+내용 작성해주기!
 </p></details>
 
 ***
