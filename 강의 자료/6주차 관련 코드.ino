@@ -31,3 +31,23 @@ int digitForNum[10][8] = { //gnd 용
 	{1, 1, 1, 1, 0, 1, 1, 0}  //9
 };
 
+void setup() 
+{
+	// 7세그먼트 각각 LED에 연결된 핀을 OUTPUT으로 설정합니다.
+	for (int i = 0 ; i < segmentLEDsNum ; i++) 
+  {
+		pinMode(segmentLEDs[i], OUTPUT);
+	}
+}
+
+void loop() 
+{
+	for (int i = 0 ; i < 10 ; i++) 
+  {
+		for (int j = 0 ; j < segmentLEDsNum ; j++) 
+    {
+			digitalWrite(segmentLEDs[j], digitForNum[i][j]);
+		}
+		delay(1000);
+	}
+}
