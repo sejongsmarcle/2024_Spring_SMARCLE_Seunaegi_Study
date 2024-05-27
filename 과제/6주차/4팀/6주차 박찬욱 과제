@@ -1,0 +1,72 @@
+# 서보모터와 7 Segment를 이용한 간단한 회로 만들기
+
+아두이노 시계 (링크: https://www.tinkercad.com/things/jGqjUFLfbKj-?sharecode=YZYk5gihuwwjFJO30rofwFxBRG2_i3ruLcFaJsdBiFA)
+![image](https://github.com/sejongsmarcle/2024_Spring_SMARCLE_Snaegi_Study/assets/162942977/645a9906-9848-4756-87db-5db335b7c595)
+
+```
+#include <Servo.h>
+
+Servo myservo;  // 서보 객체 생성
+int pos = 0;    // 서보 위치 저장 변수
+
+// 시간 추적 변수
+unsigned long previousMillis = 0;
+const long interval = 1000;  // 깜박임 간격 (밀리초)
+int seconds = 0;
+int minutes = 0;
+int hours = 0;
+
+// 0-9까지의 숫자를 위한 7-세그먼트 패턴
+byte sevenSegment[10] = {0b11111100, // 0
+                         0b01100000, // 1
+                         0b11011010, // 2
+                         0b11110010, // 3
+                         0b01100110, // 4
+                         0b10110110, // 5
+                         0b10111110, // 6
+                         0b11100000, // 7
+                         0b11111110, // 8
+                         0b11110110  // 9
+                        };
+
+void setup() {
+  myservo.attach(10);  // 서보 객체를 10번 핀에 연결
+  for (int pin = 2; pin <= 9; pin++) {
+    pinMode(pin, OUTPUT);
+  }
+}
+
+void loop() {
+  unsigned long currentMillis = millis();
+  if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+    seconds++;
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+      if (minutes >= 60) {
+        minutes = 0;
+        hours++;
+        if (hours >= 12) {
+          hours = 0;
+        }
+      }
+    }
+  }
+
+  // 시간에 따라 서보 모터 위치 변경
+  pos = map(hours, 0, 12, 0, 180);
+  myservo.write(pos);
+
+  // 7-세그먼트 디스플레이에 분 표시
+  byte pattern = sevenSegment[minutes % 10];
+  for (int pin = 2; pin <= 9; pin++) {
+    digitalWrite(pin, bitRead(pattern, pin - 2));
+  }
+
+  delay(1000);  // 1초 대기
+}
+
+```
+ - 느낀 점:
+   이번에는 7-segment랑 서보에 대해서 배웠다. 서보는 알고 있었지만 세그먼트는 처음 배우는 거라 이런 식으로 led를 작동하던 방식과 유사하다는 것이 흥미로웠고 7-segment와 같은 방식으로 다른 장치가 더 있지 않을까 궁금했다. 또한 다음 maker's day에는 어떤 걸 만들까 기대된다.
