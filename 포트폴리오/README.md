@@ -8,6 +8,8 @@
 
 ![image](https://github.com/sejongsmarcle/2024_Spring_SMARCLE_Snaegi_Study/assets/81272875/068c6ee4-988d-43eb-ac30-5724a1526c43)
 #### 공유가 아니라 게시를 눌러주세요.
+![image](https://github.com/sejongsmarcle/2024_Spring_SMARCLE_Snaegi_Study/assets/81272875/ab274eb5-95d1-4bdb-888a-87ef2c16817d)
+#### 게시 눌러주시고
 ![image](https://github.com/sejongsmarcle/2024_Spring_SMARCLE_Snaegi_Study/assets/81272875/4b9334e6-77c8-4b3a-802b-6df9193d5fe0)
 #### 그러면 위와 같이 뜰텐데 여러분이 원하는 것을 눌러주세요, (편집 허용은 누르지 말기!)
 ![image](https://github.com/sejongsmarcle/2024_Spring_SMARCLE_Snaegi_Study/assets/81272875/3e9a6ea6-3e19-4a54-85ed-a0716d5a4e78)
