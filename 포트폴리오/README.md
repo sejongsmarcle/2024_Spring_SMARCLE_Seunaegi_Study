@@ -20,7 +20,7 @@
 ### https://heather-bottle-444.notion.site/2024-SMARTON-7592e3227b0b4ab8b488fffc9a5f77d3?pvs=4
 위에 처럼 공유해주셔도 되고
 ### [현희섭_포트폴리오](https://heather-bottle-444.notion.site/2024-SMARTON-7592e3227b0b4ab8b488fffc9a5f77d3?pvs=4)
-요렇게 공유해주셔도 좋습니다. (하는 방법은 Preview로 보시거나 각자 공부해서 해보기!)
+요렇게 공유해주셔도 좋습니다. (하는 방법은 code로 보시거나 각자 공부해서 해보기!)
 
 # 아 이름은 이름_포트폴리오.md 로 올려주시면 됩니다. 그동안 고생하셨습니다!
 
